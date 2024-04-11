@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+bg{
+  background-image: url("https://5.imimg.com/data5/SELLER/Default/2023/5/309688873/VV/II/TU/8675179/online-exam-software.jpg") ;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+}
+.register-box {
+    width: 600px;
+    height: 500px;
+    margin:auto;
+    justify-items: center;
+    /*display: flex;
+    align-items: center;*/
+    background-color:#faf3f37f;
+    border-radius: 3px;
+
+}
+
+
+h1{
+    text-align: center;
+    padding-top: 15px;
+
+}
+
+h4{
+    text-align: center;
+}
+
+.form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+  
+
+
+.submit-button{
+    width: 200px;
+    height: 35px;
+    margin-top:20px;
+    margin-left: 50px;
+    background-color: #269A7E;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.a {
+    color: rgb(238, 40, 40);
+    margin-left: 70px;
+}
+  
+  
