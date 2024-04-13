@@ -122,7 +122,7 @@ export default function SignUp() {
           <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 cursor-pointer" onClick={handleGoogleSignIn}>Sign in with Google</button>
         </div>
         <p className="mt-4 text-sm">By clicking the sign up button, you agree to our
-          <a href="#" className="text-blue-500"> Terms and condition</a> and <a href="#" className="text-blue-500">Policy Privacy</a>
+          <a href="/TermsandConditions" className="text-blue-500"> Terms and condition</a> and <a href="/TermsandConditions" className="text-blue-500">Policy Privacy</a>
         </p>
         <p className="mt-4 text-sm">Already have an account? <a href="/Login" className="text-blue-500">Login</a></p>
       </div>

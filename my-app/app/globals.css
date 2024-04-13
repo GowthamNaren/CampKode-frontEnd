@@ -71,6 +71,7 @@ h4{
 }
 
 
+
 .submit-button{
     width: 200px;
     height: 35px;
@@ -86,4 +87,44 @@ h4{
     margin-left: 70px;
 }
   
-  
+.carousel-container {
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Style for carousel items */
+.rec.rec-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0px 10px;
+}
+
+/* Style for images */
+.rec.rec-arrow {
+  background-color: transparent;
+  color: black;
+}
+
+.rec.rec-arrow:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+
+.rec.rec-arrow:disabled:hover {
+  cursor: default;
+}
+
+.rec.rec-pagination {
+  display: none; /* Hide pagination dots */
+}
+
+.rec.rec-dot {
+  display: none; /* Hide navigation dots */
+}

@@ -2,6 +2,7 @@
 import React ,{useState, useEffect} from 'react';
 import { Axios } from 'axios';
 import { useRouter } from 'next/navigation';
+
 export default function ExamRegistration() {
     const router = useRouter();
     const [formData, setFormData] = useState({
@@ -63,7 +64,7 @@ export default function ExamRegistration() {
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="fname" className="block">First Name:</label>
                     <input type="text" id="fname" value={formData.fname} onChange={handleChange} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 mb-4" required />
-
+                    {errors.fname}
                     <label htmlFor="lname" className="block">Last Name:</label>
                     <input type="text" id="lname" value={formData.lname} onChange={handleChange} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 mb-4" required/>
 
