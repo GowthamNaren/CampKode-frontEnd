@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
+import {useRouter} from 'next/navigation';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     // const history = useHistory();
-
+    const router = useRouter();
     const handleSubmit = async (e) => {
         e.preventDefault();
         // Send a request to verify the password
@@ -23,6 +23,7 @@ const Login = () => {
             const data = await response.json();
             if (response.status==200) {
                 alert('Login Successful!!');
+                router.push('/');
             } else if (response.status === 401) {
                   if (data.message === 'Invalid Password') {
 

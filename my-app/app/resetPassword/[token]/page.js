@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function ResetPassword() {
+export default function ResetPassword(req,res) {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -15,7 +15,9 @@ export default function ResetPassword() {
             return;
         }
         try {
-            const response = await fetch('http://localhost:5500/elearning/auth/resetPassword', {
+            const resetToken = req.params.token;
+            console.log(resetToken);
+            const response = await fetch(`http://localhost:5500/elearning/auth/resetPass/${resetToken}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,7 +28,7 @@ export default function ResetPassword() {
             if (response.ok) {
                 setMessage(data.message);
                 // Redirect to login page after successful password reset
-                router.push('/login');
+                router.push('/Login');
             } else {
                 setMessage(data.error);
             }

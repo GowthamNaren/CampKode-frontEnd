@@ -21,7 +21,7 @@ export default function ForgotPassword() {
             if (response.ok) {
                 setMessage(data.message);
                 // // Redirect to reset password page
-                router.push('/resetPassword');
+                // router.push('/resetPassword');
             } else {
                 setMessage(data.error);
             }
