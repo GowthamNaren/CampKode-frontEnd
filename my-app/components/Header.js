@@ -9,7 +9,7 @@ export default function Header({ onClick }) {
       <div className='flex align-middle items-center justify-end gap-4 '>
         <Link href='/' onClick={() => onClick('home')}>Home</Link>
         <Link href={'#about'} onClick={() => onClick('about')}>About</Link>
-        <Link href={'#partners'} onClick={() => onClick('partners')}>Partners</Link>
+        <Link href={'#blogs'} onClick={() => onClick('blogs')}>Blogs</Link>
         <Link href={'#explore'} onClick={() => onClick('explore')}>Explore</Link>
         <Link href={'#reviews'} onClick={() => onClick('reviews')}>Reviews</Link>
         <button className='px-3 py-2 rounded bg-blue-800 hover:bg-blue-600 text-white'><Link href='/Login'>Login</Link></button>

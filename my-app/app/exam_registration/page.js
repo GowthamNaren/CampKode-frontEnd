@@ -2,29 +2,19 @@
 import React ,{useState, useEffect} from 'react';
 import { Axios } from 'axios';
 import { useRouter } from 'next/navigation';
+import { useFormContext } from '@/components/formContext';
 
-export default function ExamRegistration() {
+export default function ExamRegistration({formData, updateFormData}) {
     const router = useRouter();
-    const [formData, setFormData] = useState({
-        fname: '',
-        lname: '',
-        email: '',
-        dOB: '',
-        country: '',
-        state: '',
-        city: '',
-        phone: '',
-        rePhone: '',
-        altPhone: '',
-     
-    });
+  
+  
 
     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
-    };
-
+        updateFormData({ [e.target.name]: e.target.value });
+      };
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validateForm();
